@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.logo-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo {
+  border-radius: 75px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+.img {
+  max-width: 100%;
+}
+header {
+  background-color: #218380;
+  padding: 2rem 0 1rem 0;
+
+  top: 0;
+}
+.estilo-titulo-principal {
+  font-family: Georgia, "Times New Roman";
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #f0efef;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.nav__list {
+  list-style: none;
+}
+.nav__list li {
+  display: inline-block;
+  padding: 1rem;
+}
+.nav__link {
+  color: #f5c2d5;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+main {
+  padding-top: 2rem;
+}
+.intro-section {
+  display: flex;
+}
+.alineacion-bienvenida {
+  width: 50%;
+}
+.texto-bienvenida {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 2rem;
+  line-height: 1.75;
+}
+
+#video-bienvenida {
+  width: 50%;
+  height: 400px;
+}
+.admisiones {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+.admisiones a,
+.button {
+  color: #f0efef;
+  padding: 1rem;
+  background: #218380;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 0;
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #218380;
+  padding: 1rem;
+  margin-top: auto;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+footer > div {
+  width: 250px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+.footer__equipo {
+  text-align: left;
+  font-size: 17px;
+  color: white;
+}
+.imagen-equipo {
+  margin-top: 0.5rem;
+  filter: invert(1);
+}
+
+.redes {
+  text-align: center;
+  font-size: 17px;
+  display: inline-block;
+}
+.redes-icono {
+  display: inline-block;
+  color: white;
+}
+
+.copyright {
+  text-decoration: none;
+  text-align: center;
+}
+.imagen-copyright {
+  margin-top: 0.5rem;
+  filter: invert(1);
+}
+
+/*Estilo Quienes somos*/
+
+.grid-container {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "image welcome-text"
+    "text map";
+}
+.grid-item {
+  padding: 20px;
+}
+.grid-item-1 {
+  grid-template-areas: title;
+}
+.grid-item-2 {
+  width: 400px;
+
+  grid-template-areas: image;
+}
+.grid-item-3 {
+  grid-template-areas: welcome-text;
+}
+.grid-item-4 {
+  grid-template-areas: text;
+}
+.grid-item-5 {
+  grid-template-areas: map;
+  width: 400px;
+  height: 300px;
+}
+
+/*Estilo Espacios Terapéuticos*/
+
+/*Estilo Nuestro equipo*/
+
+.title {
+  text-align: center;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card-container article {
+  display: flex;
+  flex: 0 1 300px;
+  flex-direction: column;
+  border: 1px solid #218380;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.card-container article img {
+  order: -1;
+  align-self: center;
+}
+
+/* Estilo Contacto*/
+.form {
+  text-align: center;
+}
+.form > fieldset {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form > fieldset > div {
+  padding: 0.4rem;
+}
+.form > fieldset label {
+  width: 40%;
+  text-align: right;
+  vertical-align: top;
+}
+.form > fieldset input,
+.form > fieldset textarea,
+.form > fieldset select {
+  width: 55%;
+}
+
+/* Media queries*/
+
+@media (max-width: 768px) {
+  .estilo-titulo-principal {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .logo-container {
+    display: block;
+    text-align: center;
+  }
+  .nav__list li {
+    display: block;
+  }
+  .intro-section {
+    display: initial;
+  }
+  #video-bienvenida {
+    width: 100%;
+  }
+  .alineacion-bienvenida {
+    width: 100%;
+  }
+  .grid-container {
+    display: initial;
+    padding: initial;
+  }
+  .grid-item-2 {
+    width: 100%;
+  }
+  .grid-item-5 {
+    width: 100%;
+  }
+  .table {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-item-2 {
+    width: 500px;
+  }
+  .grid-item-5 {
+    width: 500px;
+  }
+}
